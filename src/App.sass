@@ -1,0 +1,146 @@
+@import '../src/assets/gems/gem.scss'
+@import '../src/assets/gems/rem.scss'
+
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  color: #000000
+
+:root 
+  --vh: 1vh
+
+@font-face
+    src: url("../src/assets/fonts/Thunder-BlackLC.woff2") format("woff2"), url("../src/assets/fonts/Thunder-BlackLC.woff") format("woff")
+    font-family: "Thunder-BlackLC"
+    font-weight: 900 // Black 
+
+@font-face
+    src: url("../src/assets/fonts/TomatoGrotesk-Regular.woff2") format("woff2"), url("../src/assets/fonts/TomatoGrotesk-Regular.woff") format("woff")
+    font-family: "TomatoGrotesk-Regular"
+    font-weight: 400 //* Regular */
+
+@font-face
+    src: url("../src/assets/fonts/Switzer-Regular.woff2") format("woff2"), url("../src/assets/fonts/Switzer-Regular.woff") format("woff")
+    font-family: "Switzer-Regular"
+    font-weight: 400 //* Regular */
+
+
+
+
+html,body 
+  font-family: "Roslindale Display Condensed"
+  background: #000000
+  overflow: hidden
+
+.unicorn-wrapper
+  display: flex
+  width: 100vw
+  height: 100vh
+  overflow: hidden
+  position: relative
+  canvas
+    z-index: 1
+
+.unicorn-image
+  width: 100%
+  height: 100%
+  object-fit: cover
+  display: flex
+  position: absolute
+  z-index: 5
+  mix-blend-mode: soft-light
+  pointer-events: none
+.texture_2
+  width: 100%
+  height: 100%
+  object-fit: cover
+  display: flex
+  position: absolute
+  z-index: 5
+  opacity: .6
+  mix-blend-mode: lighten
+  pointer-events: none
+.texture_1
+  width: 100%
+  height: 100%
+  object-fit: cover
+  display: flex
+  position: absolute
+  z-index: 5
+
+.unicorn-content
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  height: 100%
+  position: absolute
+  z-index: 5
+  mix-blend-mode: difference
+  .unicorn-content-top
+    display: flex
+    width: 100%
+    padding: gem(18) gem(23) gem(0) gem(30)
+    justify-content: space-between
+    &-center
+      width: gem(1250)
+      p 
+        &:nth-of-type(2)
+          font-family: "Switzer-Regular"
+          margin-top: gem(9)
+          font-size: gem(12)
+  .coming-soon
+    width: gem(417)
+  .unicorn-content-bottom
+    display: flex
+    width: 100%
+    flex-direction: column
+    .unicorn-content-bottom-text
+      display: flex
+      width: 100%
+      justify-content: center
+      align-items: center
+      img 
+        display: flex
+        width: gem(1559)
+          // mix-blend-mode: difference
+.unicorn-content-bottom-line
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    position: absolute
+    z-index: 5
+    bottom: gem(320)
+    padding: gem(0) gem(20)
+    .entertainment
+      display: inline-flex
+      align-items: center
+      gap: gem(8)
+      padding: gem(6) gem(20)
+      border-radius: gem(999)
+      border: 1px solid #ffffff
+      background: rgba(0, 0, 0, 0.35)
+      backdrop-filter: blur(6px)
+      img
+        width: gem(14)
+        height: gem(14)
+        transform: rotate(270deg)
+        &:nth-of-type(2)
+          transform: rotate(90deg)
+      p
+        margin: 0 gem(4)
+    .decor-line 
+      width: gem(70)
+      position: absolute
+      left: gem(210)
+      top: 0
+      &:nth-of-type(2)
+        width: gem(63)
+        left: unset 
+        right: gem(246 )
+  
+
+
