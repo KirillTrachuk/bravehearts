@@ -37,7 +37,7 @@ html,body
 .unicorn-wrapper
   display: flex
   width: 100vw
-  height: 100vh
+  height: calc(var(--vh) * 100)
   overflow: hidden
   position: relative
   canvas
@@ -85,6 +85,8 @@ html,body
     width: 100%
     padding: gem(18) gem(23) gem(0) gem(30)
     justify-content: space-between
+    p 
+      width: gem(35)
     &-center
       width: gem(1250)
       .years
@@ -93,6 +95,10 @@ html,body
         font-size: gem(12)
       .desc-1--mobile
         display: none
+      p 
+        width: gem(1250)
+   
+      
   .coming-soon
     width: gem(417)
   .unicorn-content-bottom
@@ -161,6 +167,8 @@ html,body
       padding: gem(10)
     .unicorn-content-top-center
       width: gem(630)
+      p 
+        width: gem(630)
     .unicorn-content-bottom
       .unicorn-content-bottom-text
         img 
@@ -181,6 +189,8 @@ html,body
       width: gem(351)
       position: absolute
       top: gem(59)
+      p 
+        width: gem(351)
       .desc-1--desktop
         display: none
       .desc-1--mobile
@@ -193,7 +203,7 @@ html,body
         img 
           width: gem(360)
   .unicorn-content-bottom-line
-    bottom: gem(330)
+    bottom: gem(350)
     padding: gem(0) gem(10)
     .entertainment
       display: flex
