@@ -83,14 +83,7 @@ function App() {
       </div>
 
       <div data-us-project="T30weF4YIlz3NXlvJL2v" className="unicorn-wrapper">
-        <picture>
-          <source srcSet="/dragonfly_mobile.webp" media="(max-width: 640px)" />
-          <img
-            src="/dragonfly.webp"
-            alt="Dragonfly"
-            className="unicorn-image"
-          />
-        </picture>
+        <img src="/dragonfly.webp" alt="Dragonfly" className="unicorn-image" />
         <img src="/texture_2.png" alt="texture" className="texture_2" />
         <div className="unicorn-content">
           <div className="unicorn-content-top">
