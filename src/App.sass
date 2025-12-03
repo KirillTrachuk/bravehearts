@@ -86,13 +86,17 @@ html,body
     padding: gem(18) gem(23) gem(0) gem(30)
     justify-content: space-between
     p 
-      width: gem(35)
+      display: flex
+      .fps-value
+        display: inline-block
+        width: gem(15)
     &-center
       width: gem(1250)
       .years
         font-family: "Switzer-Regular"
         margin-top: gem(9)
         font-size: gem(12)
+        justify-content: center
       .desc-1--mobile
         display: none
       p 
@@ -195,6 +199,7 @@ html,body
   &:nth-of-type(2)
     left: unset
     right: gem(-220)
+    animation-direction: reverse
 
 @keyframes plus-rotate
   from
@@ -229,7 +234,7 @@ html,body
 
 .preloader__logo
   position: relative
-  width: gem(180)
+  width: gem(90)
   max-width: 60vw
 
 .preloader__logo-outline
@@ -328,3 +333,5 @@ html,body
     height: gem(14)
     &:nth-of-type(2)
       right: gem(-20)
+  .preloader__logo
+    width: gem(45)

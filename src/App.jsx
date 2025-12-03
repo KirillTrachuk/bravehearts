@@ -87,7 +87,10 @@ function App() {
         <img src="/texture_2.png" alt="texture" className="texture_2" />
         <div className="unicorn-content">
           <div className="unicorn-content-top">
-            <p className="desc-1">fsp:{fps}</p>
+            <p className="desc-1">
+              fps:
+              <span className="fps-value desc-1">{fps}</span>
+            </p>
             <div className="unicorn-content-top-center">
               <p className="desc-1 desc-1--desktop">
                 BRAVEHEART ENTERTAINMENT IS A GLOBAL STORYTELLING STUDIO BUILT
@@ -110,7 +113,7 @@ function App() {
               <p className="desc-1 years">©2016 — ©2025</p>
             </div>
             <p className="desc-1">
-              rec <span className="rec-dot">●</span>{" "}
+              rec <span className="rec-dot"> ●</span>{" "}
             </p>
           </div>
           <div className="coming-soon-row">
