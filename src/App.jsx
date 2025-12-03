@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.sass";
 
 function App() {
+  const [fps, setFps] = useState(60);
+
   useEffect(() => {
     if (window.UnicornStudio?.isInitialized) return;
 
@@ -17,15 +19,26 @@ function App() {
     (document.head || document.body).appendChild(script);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const min = 30;
+      const max = 60;
+      const value = Math.floor(Math.random() * (max - min + 1)) + min;
+      setFps(value);
+    }, 800);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div data-us-project="T30weF4YIlz3NXlvJL2v" className="unicorn-wrapper">
       <img src="/dragonfly.png" alt="Dragonfly" className="unicorn-image" />
       <img src="/texture_2.png" alt="texture" className="texture_2" />
       <div className="unicorn-content">
         <div className="unicorn-content-top">
-          <p className="desc-1">fsp:60</p>
+          <p className="desc-1">fsp:{fps}</p>
           <div className="unicorn-content-top-center">
-            <p className="desc-1">
+            <p className="desc-1 desc-1--desktop">
               BRAVEHEART ENTERTAINMENT IS A GLOBAL STORYTELLING STUDIO BUILT FOR
               THE BOLD ● A HOME FOR VISIONARY CREATORS AND AUDIENCES WHO CRAVE
               CINEMATIC EXPERIENCES THAT MOVE THE SOUL AND EXPAND THE
@@ -37,14 +50,28 @@ function App() {
               DRIVEN BY ONE UNSHAKABLE BELIEF: THAT POWERFUL STORY TELLING HAS
               NO BOUNDARIES.
             </p>
-            <p className="desc-1">©2016 — ©2025</p>
+            <p className="desc-1 desc-1--mobile">
+              BRAVEHEART ENTERTAINMENT IS A GLOBAL STORYTELLING STUDIO BUILT FOR
+              THE BOLD ● A HOME FOR VISIONARY CREATORS AND AUDIENCES WHO CRAVE
+              CINEMATIC EXPERIENCES THAT MOVE THE SOUL AND EXPAND THE
+              IMAGINATION
+            </p>
+            <p className="desc-1 years">©2016 — ©2025</p>
           </div>
-          <p className="desc-1">rec●</p>
+          <p className="desc-1">
+            rec <span className="rec-dot">●</span>{" "}
+          </p>
         </div>
         <img src="/coming_soon.svg" alt="coming soon" className="coming-soon" />
         <div className="unicorn-content-bottom">
           <div className="unicorn-content-bottom-text">
-            <img src="/Braveheart.svg" alt="Braveheart" />
+            <picture>
+              <source
+                srcSet="/mobile_braveheart.svg"
+                media="(max-width: 640px)"
+              />
+              <img src="/Braveheart.svg" alt="Braveheart" />
+            </picture>
           </div>
         </div>
       </div>
